@@ -1,5 +1,5 @@
 import hcl2
-from utils import all_values
+from radon_terraform_metrics.utils import all_values
 
 
 class ExplicitDependencies:
