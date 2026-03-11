@@ -1,4 +1,4 @@
-from radon_terraform_metrics.import_metrics import general_metrics, configuration_metrics
+from import_metrics import general_metrics, configuration_metrics
 
 
 def extract_all(script: str):
