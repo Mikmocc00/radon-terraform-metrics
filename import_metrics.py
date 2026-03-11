@@ -1,4 +1,5 @@
-# General metrics
+# ---------------- GENERAL METRICS ----------------
+
 from general.lines_code import LinesCode
 from general.lines_blank import LinesBlank
 from general.lines_comment import LinesComment
@@ -8,30 +9,54 @@ from general.num_tokens import NumTokens
 from general.text_entropy import TextEntropy
 
 
-# Terraform configuration scope
+# ---------------- TERRAFORM CONFIGURATION METRICS ----------------
+
+# resources
 from configuration.num_resources import NumResources
+from configuration.avg_resource_size import AvgResourceSize
+from configuration.resource_type_diversity import ResourceTypeDiversity
+from configuration.resource_density import ResourceDensity
+from configuration.max_resources_per_file import MaxResourcesPerFile
+
+# modules
 from configuration.num_modules import NumModules
+from configuration.module_reuse_count import ModuleReuseCount
+from configuration.module_fan_in import ModuleFanIn
+from configuration.module_depth import ModuleDepth
+
+# variables
 from configuration.num_variables import NumVariables
+from configuration.variables_per_resource import VariablesPerResource
+from configuration.variable_default_ratio import VariableDefaultRatio
+from configuration.variable_reference_count import VariableReferenceCount
+
+# outputs / locals
 from configuration.num_outputs import NumOutputs
 from configuration.num_locals import NumLocals
+
+# providers
 from configuration.num_providers import NumProviders
+from configuration.resources_per_provider import ResourcesPerProvider
+
+# data sources
 from configuration.num_data_sources import NumDataSources
+
+# provisioners
 from configuration.num_provisioners import NumProvisioners
+from configuration.provisioners_per_resource import ProvisionersPerResource
+
+# dynamic behaviour
 from configuration.num_dynamic_blocks import NumDynamicBlocks
 from configuration.num_loops import NumLoops
 from configuration.num_conditionals import NumConditionals
-from configuration.resource_type_diversity import ResourceTypeDiversity
-from configuration.avg_resource_size import AvgResourceSize
+
+# dependencies
 from configuration.num_dependencies import NumDependencies
-from configuration.resource_density import ResourceDensity
-from configuration.variables_per_resource import VariablesPerResource
-from configuration.provisioners_per_resource import ProvisionersPerResource
-from configuration.module_reuse_count import ModuleReuseCount
-from configuration.resources_per_provider import ResourcesPerProvider
-from configuration.variable_default_ratio import VariableDefaultRatio
 from configuration.avg_dependencies_per_resource import AvgDependenciesPerResource
 from configuration.implicit_dependencies import ImplicitDependencies
-from configuration.module_fan_in import ModuleFanIn
+from configuration.explicit_dependencies import ExplicitDependencies
+from configuration.dependency_graph_density import DependencyGraphDensity
+from configuration.max_dependency_chain_length import MaxDependencyChainLength
 
 
 # ---------------- GENERAL ----------------
@@ -56,16 +81,19 @@ configuration_metrics = {
     'avg_resource_size': AvgResourceSize,
     'resource_type_diversity': ResourceTypeDiversity,
     'resource_density': ResourceDensity,
+    'max_resources_per_file': MaxResourcesPerFile,
 
     # modules
     'num_modules': NumModules,
     'module_reuse_count': ModuleReuseCount,
     'module_fan_in': ModuleFanIn,
+    'module_depth': ModuleDepth,
 
     # variables
     'num_variables': NumVariables,
     'variables_per_resource': VariablesPerResource,
     'variable_default_ratio': VariableDefaultRatio,
+    'variable_reference_count': VariableReferenceCount,
 
     # outputs / locals
     'num_outputs': NumOutputs,
@@ -90,5 +118,8 @@ configuration_metrics = {
     # dependencies
     'num_dependencies': NumDependencies,
     'avg_dependencies_per_resource': AvgDependenciesPerResource,
-    'implicit_dependencies': ImplicitDependencies
+    'implicit_dependencies': ImplicitDependencies,
+    'explicit_dependencies': ExplicitDependencies,
+    'dependency_graph_density': DependencyGraphDensity,
+    'max_dependency_chain_length': MaxDependencyChainLength
 }
