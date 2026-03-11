@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 VERSION = "0.1.0"
 
 setup(
-    name="radon-terraform-metrics",
+    name="radon_terraform_metrics",
     version=VERSION,
     description="A module to extract metrics from Terraform scripts",
     long_description=long_description,
