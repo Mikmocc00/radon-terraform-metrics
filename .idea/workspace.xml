@@ -4,49 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd943184-cade-4e96-b0c5-50264a3804ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/avg_dependencies_per_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/avg_dependencies_per_resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/avg_resource_size.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/avg_resource_size.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/dependency_graph_density.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/dependency_graph_density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/explicit_dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/explicit_dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/implicit_dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/implicit_dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/max_dependency_lenght_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/max_dependency_lenght_chain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/max_resources_per_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/max_resources_per_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/module_fan_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/module_fan_in.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/module_reuse_count.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/module_reuse_count.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_conditionals.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_conditionals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_data_sources.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_data_sources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_dynamic_blocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_dynamic_blocks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_locals.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_locals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_loops.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_loops.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_modules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_outputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_outputs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_providers.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_providers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_provisioners.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_provisioners.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/num_variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/num_variables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/provisioners_per_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/provisioners_per_resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/resource_density.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/resource_density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/resource_type_diversity.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/resource_type_diversity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/resources_per_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/resources_per_provider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/variable_default_ratio.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/variable_default_ratio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/variable_reference_count.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/variable_reference_count.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/variables_per_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/configuration/variables_per_resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/lines_blank.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/lines_blank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/lines_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/lines_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/lines_comment.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/lines_comment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/num_keys.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/num_keys.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/num_suspicious_comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/num_suspicious_comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/num_tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/num_tokens.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/text_entropy.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/general/text_entropy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/import_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/import_metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform_metrics_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/terraform_metrics_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/radon_terraform_metrics/utils.py" afterDir="false" />
+    <list default="true" id="d8779d20-6e21-471c-9e26-fde4179f224c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,53 +23,59 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;francescoPioFuccio&quot;
+  }
 }</component>
-  <component name="ProjectId" id="3AnAdN9sJzJYQWkJJsJxo7PnSYC" />
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mikmocc00/radon-terraform-metrics.git&quot;,
+    &quot;accountId&quot;: &quot;26752657-4b2a-465f-98d7-663761e4b66e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3AnNR0V9VeJkf27bWlK5HRhcgxG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/radon_terraform_metrics" />
-    </key>
-  </component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="radon_terraform_metrics" />
+      <module name="radon-terraform-metrics-right" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="radon_terraform_metrics" />
+      <module name="radon-terraform-metrics-right" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="radon_terraform_metrics" />
+      <module name="radon-terraform-metrics-right" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,6 +87,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -130,8 +97,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="radon_terraform_metrics" />
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="radon-terraform-metrics-right" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,10 +107,25 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="radon-terraform-metrics-right" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="radon_terraform_metrics" />
+      <module name="radon-terraform-metrics-right" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,13 +134,14 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="radon_terraform_metrics" />
+      <module name="radon-terraform-metrics-right" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,6 +150,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -180,21 +164,22 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cd943184-cade-4e96-b0c5-50264a3804ae" name="Changes" comment="" />
-      <created>1773218048172</created>
+      <changelist id="d8779d20-6e21-471c-9e26-fde4179f224c" name="Changes" comment="" />
+      <created>1773224363132</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1773218048172</updated>
-      <workItem from="1773218049400" duration="3340000" />
-      <workItem from="1773224438160" duration="199000" />
-      <workItem from="1773249638112" duration="4878000" />
+      <updated>1773224363132</updated>
+      <workItem from="1773224364353" duration="1003000" />
+      <workItem from="1773234783589" duration="4317000" />
+      <workItem from="1773303244438" duration="702000" />
     </task>
     <servers />
   </component>

@@ -31,5 +31,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Operating System :: OS Independent",
     ],
-    install_requires=[],
+    install_requires=["python-hcl2"],
 )
