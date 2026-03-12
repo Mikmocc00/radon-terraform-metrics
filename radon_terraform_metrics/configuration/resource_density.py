@@ -1,5 +1,5 @@
 import hcl2
-from .general.lines_code import LinesCode
+from ..general.lines_code import LinesCode
 
 
 class ResourceDensity:

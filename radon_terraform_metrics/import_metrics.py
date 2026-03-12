@@ -85,7 +85,6 @@ configuration_metrics = {
     'num_modules': NumModules,
     'module_reuse_count': ModuleReuseCount,
     'module_fan_in': ModuleFanIn,
-    'module_depth': ModuleDepth,
 
     # variables
     'num_variables': NumVariables,
