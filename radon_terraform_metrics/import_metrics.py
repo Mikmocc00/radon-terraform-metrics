@@ -1,63 +1,61 @@
 # ---------------- GENERAL METRICS ----------------
 
-from general.lines_code import LinesCode
-from general.lines_blank import LinesBlank
-from general.lines_comment import LinesComment
-from general.num_keys import NumKeys
-from general.num_suspicious_comments import NumSuspiciousComments
-from general.num_tokens import NumTokens
-from general.text_entropy import TextEntropy
+from .general.lines_code import LinesCode
+from .general.lines_blank import LinesBlank
+from .general.lines_comment import LinesComment
+from .general.num_keys import NumKeys
+from .general.num_suspicious_comments import NumSuspiciousComments
+from .general.num_tokens import NumTokens
+from .general.text_entropy import TextEntropy
 
 
 # ---------------- TERRAFORM CONFIGURATION METRICS ----------------
 
 # resources
-from configuration.num_resources import NumResources
-from configuration.avg_resource_size import AvgResourceSize
-from configuration.resource_type_diversity import ResourceTypeDiversity
-from configuration.resource_density import ResourceDensity
-from configuration.max_resources_per_file import MaxResourcesPerFile
+from .configuration.num_resources import NumResources
+from .configuration.avg_resource_size import AvgResourceSize
+from .configuration.resource_type_diversity import ResourceTypeDiversity
+from .configuration.resource_density import ResourceDensity
+from .configuration.max_resources_per_file import MaxResourcesPerFile
 
 # modules
-from configuration.num_modules import NumModules
-from configuration.module_reuse_count import ModuleReuseCount
-from configuration.module_fan_in import ModuleFanIn
-from configuration.module_depth import ModuleDepth
+from .configuration.num_modules import NumModules
+from .configuration.module_reuse_count import ModuleReuseCount
+from .configuration.module_fan_in import ModuleFanIn
 
 # variables
-from configuration.num_variables import NumVariables
-from configuration.variables_per_resource import VariablesPerResource
-from configuration.variable_default_ratio import VariableDefaultRatio
-from configuration.variable_reference_count import VariableReferenceCount
+from .configuration.num_variables import NumVariables
+from .configuration.variables_per_resource import VariablesPerResource
+from .configuration.variable_default_ratio import VariableDefaultRatio
+from .configuration.variable_reference_count import VariableReferenceCount
 
 # outputs / locals
-from configuration.num_outputs import NumOutputs
-from configuration.num_locals import NumLocals
+from .configuration.num_outputs import NumOutputs
+from .configuration.num_locals import NumLocals
 
 # providers
-from configuration.num_providers import NumProviders
-from configuration.resources_per_provider import ResourcesPerProvider
+from .configuration.num_providers import NumProviders
+from .configuration.resources_per_provider import ResourcesPerProvider
 
 # data sources
-from configuration.num_data_sources import NumDataSources
+from .configuration.num_data_sources import NumDataSources
 
 # provisioners
-from configuration.num_provisioners import NumProvisioners
-from configuration.provisioners_per_resource import ProvisionersPerResource
+from .configuration.num_provisioners import NumProvisioners
+from .configuration.provisioners_per_resource import ProvisionersPerResource
 
 # dynamic behaviour
-from configuration.num_dynamic_blocks import NumDynamicBlocks
-from configuration.num_loops import NumLoops
-from configuration.num_conditionals import NumConditionals
+from .configuration.num_dynamic_blocks import NumDynamicBlocks
+from .configuration.num_loops import NumLoops
+from .configuration.num_conditionals import NumConditionals
 
 # dependencies
-from configuration.num_dependencies import NumDependencies
-from configuration.avg_dependencies_per_resource import AvgDependenciesPerResource
-from configuration.implicit_dependencies import ImplicitDependencies
-from configuration.explicit_dependencies import ExplicitDependencies
-from configuration.dependency_graph_density import DependencyGraphDensity
-from configuration.max_dependency_chain_length import MaxDependencyChainLength
-
+from .configuration.num_dependencies import NumDependencies
+from .configuration.avg_dependencies_per_resource import AvgDependenciesPerResource
+from .configuration.implicit_dependencies import ImplicitDependencies
+from .configuration.explicit_dependencies import ExplicitDependencies
+from .configuration.dependency_graph_density import DependencyGraphDensity
+from .configuration.max_dependency_lenght_chain import MaxDependencyChainLength
 
 # ---------------- GENERAL ----------------
 
