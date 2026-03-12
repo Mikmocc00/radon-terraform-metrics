@@ -1,6 +1,6 @@
 import hcl2
-from implicit_dependencies import ImplicitDependencies
-from explicit_dependencies import ExplicitDependencies
+from .implicit_dependencies import ImplicitDependencies
+from .explicit_dependencies import ExplicitDependencies
 
 
 class DependencyGraphDensity:
