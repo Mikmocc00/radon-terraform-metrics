@@ -1,5 +1,5 @@
 import hcl2
-from radon_terraform_metrics.general.lines_code import LinesCode
+from .general.lines_code import LinesCode
 
 
 class ResourceDensity:
