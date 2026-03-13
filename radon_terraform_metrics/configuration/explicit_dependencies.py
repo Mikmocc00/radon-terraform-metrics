@@ -1,5 +1,4 @@
 import hcl2
-from ..utils import all_values
 
 
 class ExplicitDependencies:
@@ -9,25 +8,28 @@ class ExplicitDependencies:
 
     def count(self):
 
-        try:
-            parsed = hcl2.loads(self.script)
-        except Exception:
-            return 0
+        parsed = parse_hcl(self.script)
 
-        values = all_values(parsed)
+        resources = parsed.get("resource", [])
 
         deps = 0
 
-        for v in values:
+        for block in resources:
 
-            if isinstance(v, dict) and "depends_on" in v:
+            for rtype, instances in block.items():
 
-                depends = v["depends_on"]
+                for name, body in instances.items():
 
-                if isinstance(depends, list):
-                    deps += len(depends)
+                    if not isinstance(body, dict):
+                        continue
 
-                else:
-                    deps += 1
+                    if "depends_on" in body:
+
+                        depends = body["depends_on"]
+
+                        if isinstance(depends, list):
+                            deps += len(depends)
+                        else:
+                            deps += 1
 
         return deps

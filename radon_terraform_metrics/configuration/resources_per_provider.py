@@ -8,15 +8,17 @@ class ResourcesPerProvider:
 
     def count(self):
 
-        try:
-            parsed = hcl2.loads(self.script)
-        except Exception:
-            return 0
+        parsed = parse_hcl(self.script)
 
         resources = parsed.get("resource", [])
         providers = parsed.get("provider", [])
 
-        nr = len(resources)
+        nr = 0
+
+        for block in resources:
+            for rtype in block:
+                nr += len(block[rtype])
+
         np = len(providers)
 
         if np == 0:

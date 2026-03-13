@@ -7,7 +7,6 @@ class NumResources:
         self.script = script
 
     def _parse(self):
-
         try:
             return hcl2.loads(self.script)
         except Exception:
@@ -19,4 +18,10 @@ class NumResources:
 
         resources = parsed.get("resource", [])
 
-        return len(resources)(resources)
+        total = 0
+
+        for r in resources:
+            for resource_type in r.values():
+                total += len(resource_type)
+
+        return total

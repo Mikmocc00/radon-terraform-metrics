@@ -8,13 +8,19 @@ class VariablesPerResource:
 
     def count(self):
 
-        try:
-            parsed = hcl2.loads(self.script)
-        except Exception:
-            return 0
+        parsed = parse_hcl(self.script)
 
-        nv = len(parsed.get("variable", []))
-        nr = len(parsed.get("resource", []))
+        variables = parsed.get("variable", [])
+        resources = parsed.get("resource", [])
+
+        nv = 0
+        for v in variables:
+            nv += len(v)
+
+        nr = 0
+        for block in resources:
+            for rtype in block:
+                nr += len(block[rtype])
 
         if nr == 0:
             return 0

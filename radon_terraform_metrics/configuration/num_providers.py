@@ -6,23 +6,16 @@ class NumProviders:
     def __init__(self, script):
         self.script = script
 
-    def _parse(self):
-
-        try:
-            return hcl2.loads(self.script)
-        except Exception:
-            return {}
-
     def count(self):
 
-        parsed = self._parse()
+        parsed = parse_hcl(self.script)
 
         providers = parsed.get("provider", [])
 
         names = set()
 
-        for provider in providers:
-            for name in provider.keys():
+        for block in providers:
+            for name in block:
                 names.add(name)
 
         return len(names)
