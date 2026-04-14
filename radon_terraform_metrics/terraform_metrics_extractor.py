@@ -1,4 +1,4 @@
-from import_metrics import general_metrics, configuration_metrics
+from import_metrics import general_metrics, configuration_metrics,complex_metrics
 
 
 def extract_all(script: str):
@@ -8,6 +8,7 @@ def extract_all(script: str):
 
     metrics = general_metrics
     metrics.update(configuration_metrics)
+    metrics.update(complex_metrics)
 
     results = dict()
 
