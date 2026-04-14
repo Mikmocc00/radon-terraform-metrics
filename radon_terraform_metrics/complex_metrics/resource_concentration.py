@@ -1,22 +1,27 @@
-from radon_terraform_metrics.configuration.max_resources_per_file import MaxResourcesPerFile
-from radon_terraform_metrics.configuration.avg_resource_size import AvgResourceSize
-
+import re
 
 class ResourceConcentration:
     """
-    Misura quanto le risorse sono concentrate confrontando
-    il picco massimo per file con la dimensione media dei blocchi.
-    Formula: max_resources_per_file / avg_resource_size
-    Alto = molte risorse concentrate in un file con blocchi piccoli.
+    Concentrazione risorse:
+    max risorse per file / dimensione media blocchi
     """
 
     def __init__(self, script):
         self.script = script
 
-    def compute(self):
+    def count(self):
 
-        max_res = MaxResourcesPerFile(self.script).count()
-        avg_size = AvgResourceSize(self.script).count()
+        resources = re.findall(r'^\s*resource\s+"', self.script, re.MULTILINE)
+        total_resources = len(resources)
+
+        blocks = re.split(r'^\s*resource\s+"', self.script, flags=re.MULTILINE)[1:]
+        block_sizes = [len(b.splitlines()) for b in blocks]
+
+        if not block_sizes:
+            return 0.0
+
+        avg_size = sum(block_sizes) / len(block_sizes)
+        max_res = total_resources
 
         if avg_size == 0:
             return 0.0

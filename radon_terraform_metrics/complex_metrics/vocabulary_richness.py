@@ -1,28 +1,29 @@
 import math
-from radon_terraform_metrics.general.text_entropy import TextEntropy
-from radon_terraform_metrics.general.num_tokens import NumTokens
-
+import re
+from collections import Counter
 
 class VocabularyRichness:
     """
-    Misura la diversità lessicale del file: quanto il vocabolario
-    è ricco e non ripetitivo rispetto all'entropia massima possibile.
-    Formula: text_entropy / log2(num_tokens)
-    Valore in [0, 1]: vicino a 1 = vocabolario ricco e vario.
+    Ricchezza lessicale:
+    entropia / log2(token)
     """
 
     def __init__(self, script):
         self.script = script
 
-    def compute(self):
+    def count(self):
 
-        entropy = TextEntropy(self.script).count()
-        tokens = NumTokens(self.script).count()
+        tokens = re.findall(r'\S+', self.script)
 
-        if tokens < 2:
+        if len(tokens) < 2:
             return 0.0
 
-        max_entropy = math.log2(tokens)
+        counts = Counter(tokens)
+        total = len(tokens)
+
+        entropy = -sum((c / total) * math.log2(c / total) for c in counts.values())
+
+        max_entropy = math.log2(total)
 
         if max_entropy == 0:
             return 0.0
