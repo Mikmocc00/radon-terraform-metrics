@@ -1,24 +1,38 @@
-from radon_terraform_metrics.general.num_keys import NumKeys
-from radon_terraform_metrics.configuration.num_resources import NumResources
+import hcl2
+import re
+
+
+def parse_hcl(script):
+    try:
+        return hcl2.loads(script)
+    except Exception:
+        return {}
 
 
 class KeyDensity:
     """
-    Misura la densità di configurazione: quante chiavi HCL
-    sono presenti per ogni risorsa dichiarata.
-    Formula: num_keys / num_resources
-    Alto = risorse molto configurate/verbose.
+    Densità di configurazione:
+    numero di chiavi per risorsa Terraform.
     """
 
     def __init__(self, script):
         self.script = script
 
-    def compute(self):
+    def count(self):
 
-        keys = NumKeys(self.script).count()
-        resources = NumResources(self.script).count()
+        parsed = parse_hcl(self.script)
 
-        if resources == 0:
-            return 0.0
+        resources = parsed.get("resource", [])
 
-        return keys / resources
+        total_resources = 0
+        for block in resources:
+            for rtype in block:
+                total_resources += len(block[rtype])
+
+        pattern = r'^\s*[a-zA-Z0-9_\-]+\s*='
+        total_keys = len(re.findall(pattern, self.script, re.MULTILINE))
+
+        if total_resources == 0:
+            return 0
+
+        return total_keys / total_resources
