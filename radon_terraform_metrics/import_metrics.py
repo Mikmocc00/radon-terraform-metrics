@@ -1,3 +1,16 @@
+# ---------------- COMPLEX METRICS ----------------
+
+from .complex_metrics.complexity_score import ComplexityScore
+from .complex_metrics.resource_sprawl import ResourceSprawl
+from .complex_metrics.key_density import KeyDensity
+from .complex_metrics.resource_concentration import ResourceConcentration
+from .complex_metrics.avg_block_verbosity import AvgBlockVerbosity
+from .complex_metrics.coupling_score import CouplingScore
+from .complex_metrics.modularity_score import ModularityScore
+from .complex_metrics.vocabulary_richness import VocabularyRichness
+
+
+
 # ---------------- GENERAL METRICS ----------------
 
 from .general.lines_code import LinesCode
@@ -67,6 +80,17 @@ general_metrics = {
     'num_suspicious_comments': NumSuspiciousComments,
     'num_tokens': NumTokens,
     'text_entropy': TextEntropy
+}
+
+complex_metrics = {
+    'complexity_score': ComplexityScore,
+    'resource_sprawl': ResourceSprawl,
+    'resource_concentration': ResourceConcentration,
+    'avg_block_verbosity': AvgBlockVerbosity,
+    'coupling_score': CouplingScore,
+    'modularity_score': ModularityScore,
+    'vocabulary_richness': VocabularyRichness,
+    'key_density': KeyDensity,
 }
 
 
