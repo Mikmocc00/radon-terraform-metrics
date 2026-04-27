@@ -1,6 +1,6 @@
 from ..configuration.num_provisioners import NumProvisioners
 from ..configuration.provisioners_per_resource import ProvisionersPerResource
-from complexity_score import ComplexityScore
+from .complexity_score import ComplexityScore
 
 class ProvisionerRisk:
     """
