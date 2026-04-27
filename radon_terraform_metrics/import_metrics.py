@@ -1,12 +1,15 @@
 # ---------------- COMPLEX METRICS ----------------
-
-from .complex_metrics.complexity_score import ComplexityScore
-from .complex_metrics.resource_sprawl import ResourceSprawl
-from .complex_metrics.key_density import KeyDensity
-from .complex_metrics.resource_concentration import ResourceConcentration
 from .complex_metrics.avg_block_verbosity import AvgBlockVerbosity
+from .complex_metrics.change_amplification import ChangeAmplification
+from .complex_metrics.complexity_score import ComplexityScore
+from .complex_metrics.config_stress import ConfigStress
+from .complex_metrics.coupling_pressure import CouplingPressure
 from .complex_metrics.coupling_score import CouplingScore
+from .complex_metrics.dynamic_complexity import DynamicComplexity
+from .complex_metrics.key_density import KeyDensity
 from .complex_metrics.modularity_score import ModularityScore
+from .complex_metrics.provisioner_risk import ProvisionerRisk
+from .complex_metrics.resource_sprawl import ResourceSprawl
 from .complex_metrics.vocabulary_richness import VocabularyRichness
 
 
@@ -29,7 +32,6 @@ from .configuration.num_resources import NumResources
 from .configuration.avg_resource_size import AvgResourceSize
 from .configuration.resource_type_diversity import ResourceTypeDiversity
 from .configuration.resource_density import ResourceDensity
-from .configuration.max_resources_per_file import MaxResourcesPerFile
 
 # modules
 from .configuration.num_modules import NumModules
@@ -83,14 +85,18 @@ general_metrics = {
 }
 
 complex_metrics = {
-    'complexity_score': ComplexityScore,
-    'resource_sprawl': ResourceSprawl,
-    'resource_concentration': ResourceConcentration,
     'avg_block_verbosity': AvgBlockVerbosity,
+    'change_amplification': ChangeAmplification,
+    'complexity_score': ComplexityScore,
+    'config_stress': ConfigStress,
+    'coupling_pressure': CouplingPressure,
     'coupling_score': CouplingScore,
-    'modularity_score': ModularityScore,
-    'vocabulary_richness': VocabularyRichness,
+    'dynamic_complexity': DynamicComplexity,
     'key_density': KeyDensity,
+    'modularity_score': ModularityScore,
+    'provisioner_risk': ProvisionerRisk,
+    'resource_sprawl': ResourceSprawl,
+    'vocabulary_richness': VocabularyRichness,
 }
 
 
@@ -103,7 +109,6 @@ configuration_metrics = {
     'avg_resource_size': AvgResourceSize,
     'resource_type_diversity': ResourceTypeDiversity,
     'resource_density': ResourceDensity,
-    'max_resources_per_file': MaxResourcesPerFile,
 
     # modules
     'num_modules': NumModules,

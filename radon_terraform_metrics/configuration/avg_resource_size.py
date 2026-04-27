@@ -1,4 +1,4 @@
-import re
+import hcl2
 
 
 class AvgResourceSize:
@@ -8,15 +8,24 @@ class AvgResourceSize:
 
     def count(self):
 
-        resources = re.findall(
-            r'resource\s+"[^"]+"\s+"[^"]+"\s*{[^}]*}',
-            self.script,
-            re.DOTALL
-        )
-
-        if not resources:
+        try:
+            parsed = hcl2.loads(self.script)
+        except Exception:
             return 0
 
-        sizes = [len(r.splitlines()) for r in resources]
+        resources = parsed.get("resource", [])
 
-        return int(sum(sizes) / len(sizes))
+        total_sizes = []
+        lines = self.script.splitlines()
+
+        for block in resources:
+            for rtype in block:
+                for name in block[rtype]:
+
+                    size = len(name.keys())
+                    total_sizes.append(size)
+
+        if not total_sizes:
+            return 0
+
+        return sum(total_sizes) / len(total_sizes)
