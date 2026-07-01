@@ -1,4 +1,4 @@
-from import_metrics import general_metrics, configuration_metrics,complex_metrics
+from import_metrics import general_metrics, configuration_metrics, complex_metrics
 
 
 def extract_all(script: str):
